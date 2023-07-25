@@ -1,67 +1,69 @@
-<?php
-$connect = mysqli_connect("localhost", "root", "", "testing");
-$query = "SELECT * FROM tbl_user ORDER BY id DESC";
-$result = mysqli_query($connect, $query);
-?>
-<html>  
- <head>  
-          <title>Live Table Data Edit Delete using Tabledit Plugin in PHP</title>  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>            
-    <script src="jquery-tabledit-1.2.3\jquery.tabledit.min.js"></script>
-    </head>  
-    <body>  
-  <div class="container">  
-   <br />  
-   <br />  
-   <br />  
-            <div class="table-responsive">  
-    <h3 align="center">Live Table Data Edit Delete using Tabledit Plugin in PHP</h3><br />  
-    <table id="editable_table" class="table table-bordered table-striped">
-     <thead>
-      <tr>
-       <th>ID</th>
-       <th>First Name</th>
-       <th>Last Name</th>
-      </tr>
-     </thead>
-     <tbody>
-     <?php
-     while($row = mysqli_fetch_array($result))
-     {
-      echo '
-      <tr>
-       <td>'.$row["id"].'</td>
-       <td>'.$row["first_name"].'</td>
-       <td>'.$row["last_name"].'</td>
-      </tr>
-      ';
-     }
-     ?>
-     </tbody>
-    </table>
-   </div>  
-  </div>  
- </body>  
-</html>  
-<script>  
-$(document).ready(function(){  
-     $('#editable_table').Tabledit({
-      url:'action.php',
-      columns:{
-       identifier:[0, "id"],
-       editable:[[1, 'first_name'], [2, 'last_name']]
-      },
-      restoreButton:false,
-      onSuccess:function(data, textStatus, jqXHR)
-      {
-       if(data.action == 'delete')
-       {
-        $('#'+data.id).remove();
-       }
-      }
-     });
- 
-});  
- </script>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Sign In</title>
+</head>
+<body>
+    <script>
+        history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+            history.go(1);
+        };
+    </script>
+    <div class="authentication-bg min-vh-100">
+        <div class="bg-overlay bg-white"></div>
+        <div class="container">
+            <div class="d-flex flex-column min-vh-100 px-3 pt-4">
+                <div class="row justify-content-center my-auto">
+                    <div class="col-md-8 col-lg-6 col-xl-4">
+                        <div class="text-center py-5">
+                            <div class="mb-4">
+                                <h5>Welcome Back !</h5>
+                                <p>Sign in to continue.</p>
+                            </div>
+                            <form action="verify_login.php" method="POST">
+                                <div class="form-floating form-floating-custom mb-3">
+                                    <input type="text" class="form-control" id="input-username" name="username" placeholder="Enter User Name">
+                                    <label for="input-username">Username</label>
+                                    <div class="form-floating-icon">
+                                        <i class="uil uil-users-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="form-floating form-floating-custom mb-3">
+                                    <input type="password" class="form-control" id="input-password" name="password" placeholder="Enter Password">
+                                    <label for="input-password">Password</label>
+                                    <div class="form-floating-icon">
+                                        <i class="uil uil-padlock"></i>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="form-floating form-floating-custom mb-2">
+                                    <input type="text" class="form-control" id="input-captcha" name="captcha" placeholder="Enter Captcha">
+                                    <label for="input-captcha">Captcha</label>
+                                    <div class="form-floating-icon">
+                                        <i class="uil uil-lock-access"></i>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <img src="captcha.php" alt="CAPTCHA">
+                                </div> -->
+
+                                <div class="mt-3">
+                                    <button class="btn btn-info w-100" type="submit" name="login">Log In</button>
+                                </div>
+                            </form><!-- end form -->
+
+                            <div class="mt-5 text-center text-muted">
+                                <p>Don't have an account? <a href="auth-signup-basic.php" class="fw-medium text-decoration-underline">Signup</a></p>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div>
+        </div><!-- end container -->
+    </div>
+    <!-- end authentication section -->
+</body>
+</html>
