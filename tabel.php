@@ -1,6 +1,6 @@
 <?php
 $connect = mysqli_connect("localhost", "root", "", "testing");
-$query = "SELECT * FROM tbl_user ORDER BY id DESC";
+$query = "SELECT * FROM tbl_user ORDER BY id ASC";
 $result = mysqli_query($connect, $query);
 ?>
 <html>  
@@ -13,9 +13,9 @@ $result = mysqli_query($connect, $query);
     </head>  
     <body>  
   <div class="container">  
-   <br />  
-   <br />  
-   <br />  
+   <br/>  
+   <br/>  
+   <br/>  
             <div class="table-responsive">  
     <h3 align="center">Live Table Data Edit Delete using Tabledit Plugin in PHP</h3><br />  
     <table id="editable_table" class="table table-bordered table-striped">
@@ -42,26 +42,40 @@ $result = mysqli_query($connect, $query);
      </tbody>
     </table>
    </div>  
+   <button id="btnAddRow" class="btn btn-primary">Add New Row</button>
   </div>  
  </body>  
 </html>  
-<script>  
-$(document).ready(function(){  
-     $('#editable_table').Tabledit({
-      url:'action.php',
-      columns:{
-       identifier:[0, "id"],
-       editable:[[1, 'first_name'], [2, 'last_name']]
-      },
-      restoreButton:false,
-      onSuccess:function(data, textStatus, jqXHR)
-      {
-       if(data.action == 'delete')
-       {
-        $('#'+data.id).remove();
-       }
-      }
-     });
- 
-});  
- </script>
+<script>
+$(document).ready(function() {
+    $('#editable_table').Tabledit({
+        url: 'action.php',
+        columns: {
+            identifier: [0, "id"],
+            editable: [[1, 'first_name'], [2, 'last_name']]
+        },
+        restoreButton: false,
+        onSuccess: function(data, textStatus, jqXHR) {
+            if (data.action == 'delete') {
+                $('#' + data.id).remove();
+            }
+        }
+    });
+
+    // Handle the click event of the "Add New Row" button
+    $('#btnAddRow').click(function() {
+        $.ajax({
+            url: 'add_data.php',
+            method: 'POST',
+            data: {
+                action: 'add'
+            },
+            success: function(response) {
+                // Reload the page to show the new row
+                location.reload();
+            }
+        });
+    });
+});
+</script>
+
