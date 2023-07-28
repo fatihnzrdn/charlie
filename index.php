@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <title>Sign In</title>
@@ -15,6 +16,7 @@
 
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
 </head>
+
 <body>
     <script>
         history.pushState(null, null, location.href);
@@ -35,14 +37,16 @@
                             </div>
                             <form action="verify_login.php" method="POST">
                                 <div class="form-floating form-floating-custom mb-3">
-                                    <input type="text" class="form-control" id="input-username" name="username" placeholder="Enter User Name">
+                                    <input type="text" class="form-control" id="input-username" name="username"
+                                        placeholder="Enter User Name">
                                     <label for="input-username">Username</label>
                                     <div class="form-floating-icon">
                                         <i class="uil uil-users-alt"></i>
                                     </div>
                                 </div>
                                 <div class="form-floating form-floating-custom mb-3">
-                                    <input type="password" class="form-control" id="input-password" name="password" placeholder="Enter Password">
+                                    <input type="password" class="form-control" id="input-password" name="password"
+                                        placeholder="Enter Password">
                                     <label for="input-password">Password</label>
                                     <div class="form-floating-icon">
                                         <i class="uil uil-padlock"></i>
@@ -67,7 +71,8 @@
                             </form><!-- end form -->
 
                             <div class="mt-5 text-center text-muted">
-                                <p>Don't have an account? <a href="auth-signup-basic.php" class="fw-medium text-decoration-underline">Signup</a></p>
+                                <p>Don't have an account? <a href="auth-signup-basic.php"
+                                        class="fw-medium text-decoration-underline">Signup</a></p>
                             </div>
                         </div>
                     </div><!-- end col -->
@@ -82,4 +87,5 @@
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
 </body>
+
 </html>
