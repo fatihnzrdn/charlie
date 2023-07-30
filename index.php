@@ -53,34 +53,22 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="form-floating form-floating-custom mb-2">
-                                    <input type="text" class="form-control" id="input-captcha" name="captcha" placeholder="Enter Captcha">
-                                    <label for="input-captcha">Captcha</label>
-                                    <div class="form-floating-icon">
-                                        <i class="uil uil-lock-access"></i>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <img src="captcha.php" alt="CAPTCHA">
-                                </div> -->
-
                                 <div class="mt-3">
                                     <button class="btn btn-info w-100" type="submit" name="login">Log In</button>
                                 </div>
-                            </form><!-- end form -->
+                            </form> 
 
                             <div class="mt-5 text-center text-muted">
                                 <p>Don't have an account? <a href="auth-signup-basic.php"
                                         class="fw-medium text-decoration-underline">Signup</a></p>
                             </div>
                         </div>
-                    </div><!-- end col -->
-                </div><!-- end row -->
+                    </div>
+                </div>
             </div>
-        </div><!-- end container -->
+        </div>
     </div>
-    <!-- end authentication section -->
+    
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>

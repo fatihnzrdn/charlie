@@ -60,20 +60,20 @@
                                 <div class="mt-3">
                                     <button class="btn btn-info w-100" type="submit">Register</button>
                                 </div>
-                            </form><!-- end form -->
+                            </form>
 
                             <div class="mt-5 text-center">
                                 <p>Already have an account ? <a href="index.php"
                                         class="fw-medium text-decoration-underline"> Signin </a></p>
                             </div>
                         </div>
-                    </div><!-- end col -->
-                </div><!-- end row -->
+                    </div>
+                </div>
 
             </div>
-        </div><!-- end container -->
+        </div>
     </div>
-    <!-- end authentication section -->
+
 
 </body>
 

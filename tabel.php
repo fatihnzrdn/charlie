@@ -22,7 +22,7 @@ $result = mysqli_query($connect, $query);
         <div class="table-responsive">
             <h3 align="center">Live Table Data Edit Delete using Tabledit Plugin in PHP</h3><br />
             <table id="editable_table" class="table table-bordered table-striped table-hover">   
-                <thead class="thead-dark">
+                <thead>
                     <tr>
                         <th>ID</th>
                         <th>First Name</th>
