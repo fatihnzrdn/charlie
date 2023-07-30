@@ -10,7 +10,8 @@ $result = mysqli_query($connect, $query);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="jquery-tabledit-1.2.3\jquery.tabledit.min.js"></script>
+    <script src="jquery-tabledit-1.2.3\jquery.tabledit.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,8 +21,8 @@ $result = mysqli_query($connect, $query);
         <br />
         <div class="table-responsive">
             <h3 align="center">Live Table Data Edit Delete using Tabledit Plugin in PHP</h3><br />
-            <table id="editable_table" class="table table-bordered table-striped">
-                <thead>
+            <table id="editable_table" class="table table-bordered table-striped table-hover">   
+                <thead class="thead-dark">
                     <tr>
                         <th>ID</th>
                         <th>First Name</th>
@@ -42,7 +43,7 @@ $result = mysqli_query($connect, $query);
                 </tbody>
             </table>
         </div>
-        <button id="btnAddRow" class="btn btn-primary">Add New Row</button>
+        <button id="btnAddRow" class="btn btn-primary btn-lg">Add New Row</button>
     </div>
 </body>
 

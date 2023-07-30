@@ -26,9 +26,9 @@ if (typeof jQuery === 'undefined') {
 
         var defaults = {
             url: window.location.href,
-            inputClass: 'form-control input-sm',
+            inputClass: 'form-control-lg input-lg',
             toolbarClass: 'btn-toolbar',
-            groupClass: 'btn-group btn-group-sm',
+            groupClass: 'btn-group btn-group-lg',
             dangerClass: 'danger',
             warningClass: 'warning',
             mutedClass: 'text-muted',
@@ -42,26 +42,26 @@ if (typeof jQuery === 'undefined') {
             restoreButton: true,
             buttons: {
                 edit: {
-                    class: 'btn btn-sm btn-default',
+                    class: 'btn btn-lg btn-default',
                     html: '<span class="glyphicon glyphicon-pencil"></span>',
                     action: 'edit'
                 },
                 delete: {
-                    class: 'btn btn-sm btn-default',
+                    class: 'btn btn-lg btn-default',
                     html: '<span class="glyphicon glyphicon-trash"></span>',
                     action: 'delete'
                 },
                 save: {
-                    class: 'btn btn-sm btn-success',
+                    class: 'btn btn-lg btn-success',
                     html: 'Save'
                 },
                 restore: {
-                    class: 'btn btn-sm btn-warning',
+                    class: 'btn btn-lg btn-warning',
                     html: 'Restore',
                     action: 'restore'
                 },
                 confirm: {
-                    class: 'btn btn-sm btn-danger',
+                    class: 'btn btn-lg btn-danger',
                     html: 'Confirm'
                 }
             },
