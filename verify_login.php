@@ -53,9 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-
-
-
 // Close the statement and database connection
 $stmt->close();
 $koneksi->close();

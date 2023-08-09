@@ -4,6 +4,7 @@ $query = "SELECT * FROM tbl_user ORDER BY id ASC";
 $result = mysqli_query($connect, $query);
 $no = 1;
 ?>
+<!doctype html>
 <html>
 
 <head>
