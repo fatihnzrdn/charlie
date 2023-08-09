@@ -20,24 +20,26 @@ $result = mysqli_query($connect, $query);
         <br />
         <br />
         <div class="table-responsive">
-            <h3 align="center">CCIT Students</h3><br />
+            <h3 align="center">Live Table Data Edit Delete using Tabledit Plugin in PHP</h3><br />
             <table id="editable_table" class="table table-bordered table-striped table-hover">   
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th>ID</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
+                    $i=1;
                     while ($row = mysqli_fetch_array($result)) {
                         echo '
                             <tr>
-                            <td>' . $row["id"] . '</td>
+                            <td>' . $i . '</td>
                             <td>' . $row["first_name"] . '</td>
                             <td>' . $row["last_name"] . '</td>
                             </tr>';
+                            $i++;
                         }
                     ?>
                 </tbody>
