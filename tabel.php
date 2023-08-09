@@ -2,6 +2,7 @@
 $connect = mysqli_connect("localhost", "root", "", "testing");
 $query = "SELECT * FROM tbl_user ORDER BY id ASC";
 $result = mysqli_query($connect, $query);
+$no = 1;
 ?>
 <html>
 
@@ -20,11 +21,11 @@ $result = mysqli_query($connect, $query);
         <br />
         <br />
         <div class="table-responsive">
-            <h3 align="center">Live Table Data Edit Delete using Tabledit Plugin in PHP</h3><br />
+            <h3 align="center">CCIT Students</h3><br />
             <table id="editable_table" class="table table-bordered table-striped table-hover">   
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>No</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                     </tr>
@@ -34,10 +35,11 @@ $result = mysqli_query($connect, $query);
                     while ($row = mysqli_fetch_array($result)) {
                         echo '
                             <tr>
-                            <td>' . $row["id"] . '</td>
+                            <td>' . $no . '</td>
                             <td>' . $row["first_name"] . '</td>
                             <td>' . $row["last_name"] . '</td>
                             </tr>';
+                            $no++; 
                         }
                     ?>
                 </tbody>
