@@ -2,7 +2,6 @@
 $connect = mysqli_connect("localhost", "root", "", "testing");
 $query = "SELECT * FROM tbl_user ORDER BY id ASC";
 $result = mysqli_query($connect, $query);
-$no = 1;
 ?>
 <html>
 
@@ -35,11 +34,10 @@ $no = 1;
                     while ($row = mysqli_fetch_array($result)) {
                         echo '
                             <tr>
-                            <td>' . $no . '</td>
+                            <td>' . $row["id"] . '</td>
                             <td>' . $row["first_name"] . '</td>
                             <td>' . $row["last_name"] . '</td>
                             </tr>';
-                            $no++; 
                         }
                     ?>
                 </tbody>
