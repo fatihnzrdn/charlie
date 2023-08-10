@@ -18,12 +18,6 @@
 </head>
 
 <body>
-    <script>
-        history.pushState(null, null, location.href);
-        window.onpopstate = function () {
-            history.go(1);
-        };
-    </script>
     <div class="authentication-bg min-vh-100">
         <div class="bg-overlay bg-white"></div>
         <div class="container">
@@ -40,26 +34,19 @@
                                     <input type="text" class="form-control" id="input-username" name="username"
                                         placeholder="Enter User Name">
                                     <label for="input-username">Username</label>
-                                    <div class="form-floating-icon">
-                                        <i class="uil uil-users-alt"></i>
-                                    </div>
                                 </div>
                                 <div class="form-floating form-floating-custom mb-3">
                                     <input type="password" class="form-control" id="input-password" name="password"
                                         placeholder="Enter Password">
                                     <label for="input-password">Password</label>
-                                    <div class="form-floating-icon">
-                                        <i class="uil uil-padlock"></i>
-                                    </div>
                                 </div>
-
                                 <div class="mt-3">
                                     <button class="btn btn-info w-100" type="submit" name="login">Log In</button>
                                 </div>
                             </form> 
 
                             <div class="mt-5 text-center text-muted">
-                                <p>Don't have an account? <a href="auth-signup-basic.php"
+                                <p>Don't have an account? <a href="signup.php"
                                         class="fw-medium text-decoration-underline">Signup</a></p>
                             </div>
                         </div>

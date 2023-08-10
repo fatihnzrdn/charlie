@@ -1,16 +1,5 @@
 <?php
-session_start();
-
-$server = "localhost";
-$username = "root";
-$password = "";
-$db = "web_ccit";
-
-$koneksi = mysqli_connect($server, $username, $password, $db);
-
-if (mysqli_connect_errno()) {
-    echo "Koneksi gagal: " . mysqli_connect_error();
-}
+include "koneksi.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -23,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sss", $username, $ip_address, $timestamp);
     // Execute the statement
     if ($stmt->execute()) {
-        echo ":)";
+        echo "Terdata";
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -38,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verify the entered password against the stored hashed password
         if (password_verify($password, $hashedPassword)) {
-            // Redirect to the admin page
+            // Redirect to the tabel page
             header("Location: tabel.php");
             exit();
         } else {

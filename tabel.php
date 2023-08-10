@@ -2,7 +2,6 @@
     $connect = mysqli_connect("localhost", "root", "", "testing");
     $query = "SELECT * FROM tbl_user ORDER BY id ASC";
     $result = mysqli_query($connect, $query);
-    $no = 1;
 ?>
 
 <html>
@@ -20,13 +19,13 @@
             <br/>
             <br/>
             <div class="table-responsive">
-                <h3 align="center">Live Table Data Edit Delete using Tabledit Plugin in PHP</h3>
+                <h3 align="center">Daftar Mahasiswa CCIT</h3>
                 <br />
                 <table id="editable_table" class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>No.</th>
-                            <th>ID</th>
+                            <th>No</th>
+                            <th>Id</th>
                             <th>First Name</th>
                             <th>Last Name</th>
                         </tr>

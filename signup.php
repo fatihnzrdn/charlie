@@ -44,19 +44,12 @@
                                     <input type="text" class="form-control" id="input-username"
                                         placeholder="Enter User Name" name="username">
                                     <label for="input-username">Username</label>
-                                    <div class="form-floating-icon">
-                                        <i class="uil uil-users-alt"></i>
-                                    </div>
                                 </div>
                                 <div class="form-floating form-floating-custom mb-3">
                                     <input type="password" class="form-control" id="floatingPassword"
                                         placeholder="Enter Password" name="password">
                                     <label for="floatingPassword">Password</label>
-                                    <div class="form-floating-icon">
-                                        <i class="uil uil-padlock"></i>
-                                    </div>
                                 </div>
-
                                 <div class="mt-3">
                                     <button class="btn btn-info w-100" type="submit">Register</button>
                                 </div>

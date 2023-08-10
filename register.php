@@ -1,14 +1,5 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password = "";
-$db = "web_ccit";
-
-$koneksi = mysqli_connect($server, $username, $password, $db);
-
-if (mysqli_connect_errno()) {
-    echo "Koneksi gagal: " . mysqli_connect_error();
-}
+include "koneksi.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -20,12 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_num_rows($checkResult) > 0) {
         // Username already exists, display an error message
-        echo "<script>alert('Username is already taken. Please choose a different username.');</script>";
-        echo "<script>window.location.href = 'auth-signup-basic.php';</script>";
+        echo "<script>alert('Username sudah terdata. Silahkan input username lain.');</script>";
+        echo "<script>window.location.href = 'signup.php';</script>";
 
     } else {
         // Username is available, proceed with inserting the data
-
         // Hash the password
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
