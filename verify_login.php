@@ -5,11 +5,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
     $ip_address = $_SERVER['REMOTE_ADDR'];
-    $timestamp = date('Y-m-d H:i:s'); // Current timestamp
+    // $timestamp = date('Y-m-d H:i:s'); // Current timestamp
 
     // Prepare the SQL statement
-    $stmt = $koneksi->prepare("INSERT INTO login_history (username, ip_address, login_time) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $username, $ip_address, $timestamp);
+    $stmt = $koneksi->prepare("INSERT INTO login_history (username, ip_address, login_time) VALUES (?, ?, now())");
+    $stmt->bind_param("ss", $username, $ip_address);
     // Execute the statement
     if ($stmt->execute()) {
         echo "New records created successfully";
