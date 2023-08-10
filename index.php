@@ -5,15 +5,10 @@
     <meta charset="utf-8" />
     <title>Sign In</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <link href="css/bootstrap-icons.css" rel="stylesheet">
-
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
 </head>
 
@@ -26,18 +21,16 @@
                     <div class="col-md-8 col-lg-6 col-xl-4">
                         <div class="text-center py-5">
                             <div class="mb-4">
-                                <h5>Welcome Back !</h5>
+                                <h5>Welcome!</h5>
                                 <p>Sign in to continue.</p>
                             </div>
                             <form action="verify_login.php" method="POST">
                                 <div class="form-floating form-floating-custom mb-3">
-                                    <input type="text" class="form-control" id="input-username" name="username"
-                                        placeholder="Enter User Name">
+                                    <input type="text" class="form-control" id="input-username" name="username">
                                     <label for="input-username">Username</label>
                                 </div>
                                 <div class="form-floating form-floating-custom mb-3">
-                                    <input type="password" class="form-control" id="input-password" name="password"
-                                        placeholder="Enter Password">
+                                    <input type="password" class="form-control" id="input-password" name="password">
                                     <label for="input-password">Password</label>
                                 </div>
                                 <div class="mt-3">

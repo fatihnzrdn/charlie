@@ -2,30 +2,18 @@
 <html>
 
 <head>
-
     <meta charset="utf-8" />
     <title>Signup</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <link href="css/bootstrap-icons.css" rel="stylesheet">
-
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
-
 </head>
 
 
 <body>
-
-    <!-- <body data-layout="horizontal"> -->
 
     <div class="authentication-bg min-vh-100">
         <div class="bg-overlay bg-white"></div>
@@ -41,13 +29,11 @@
                             </div>
                             <form action="register.php" method="POST">
                                 <div class="form-floating form-floating-custom mb-3">
-                                    <input type="text" class="form-control" id="input-username"
-                                        placeholder="Enter User Name" name="username">
+                                    <input type="text" class="form-control" id="input-username" name="username">
                                     <label for="input-username">Username</label>
                                 </div>
                                 <div class="form-floating form-floating-custom mb-3">
-                                    <input type="password" class="form-control" id="floatingPassword"
-                                        placeholder="Enter Password" name="password">
+                                    <input type="password" class="form-control" id="floatingPassword" name="password">
                                     <label for="floatingPassword">Password</label>
                                 </div>
                                 <div class="mt-3">

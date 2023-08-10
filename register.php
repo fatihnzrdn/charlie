@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include "koneksi_login.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_num_rows($checkResult) > 0) {
         // Username already exists, display an error message
-        echo "<script>alert('Username sudah terdata. Silahkan input username lain.');</script>";
+        echo "<script>alert('Username is already taken. Please choose a different username.');</script>";
         echo "<script>window.location.href = 'signup.php';</script>";
 
     } else {

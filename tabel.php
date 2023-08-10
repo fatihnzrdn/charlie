@@ -19,7 +19,7 @@
             <br/>
             <br/>
             <div class="table-responsive">
-                <h3 align="center">Daftar Mahasiswa CCIT</h3>
+                <h3 align="center">List of CCIT Students</h3>
                 <br />
                 <table id="editable_table" class="table table-bordered table-striped table-hover">
                     <thead>

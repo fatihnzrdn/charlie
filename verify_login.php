@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include "koneksi_login.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sss", $username, $ip_address, $timestamp);
     // Execute the statement
     if ($stmt->execute()) {
-        echo "Terdata";
+        echo "New records created successfully";
     } else {
         echo "Error: " . $stmt->error;
     }
